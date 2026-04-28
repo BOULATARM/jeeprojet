@@ -3,16 +3,20 @@ package caluclatrice;
 public class Clac {
 	float a;
 	float b;
-	float sum() {
+	public Clac(float a,float b) {
+		this.a=a;
+		this.b=b;
+	}
+	public float sum() {
 		return a+b;
 	}
-	float div() {
+	public float div() {
 		return a/b;
 	}
-	float mul() {
+	public float mul() {
 		return a*b;
 	}
-	float sou() {
+	public float sou() {
 		return a-b;
 	}
 
