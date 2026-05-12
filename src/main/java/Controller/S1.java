@@ -35,25 +35,25 @@ public class S1 extends HttpServlet {
 		float a =Float.parseFloat(request.getParameter("n1"));
 		float b=Float.parseFloat(request.getParameter("n2"));
 		Clac o1=new Clac(a,b);
+		
 		float somme=o1.sum();
 		float div=o1.div();
 		float mul=o1.mul();
 		float sou=o1.sou();
+		String choix=request.getParameter("op");
 		out.println();
-		out.println("la somme du "+a+" et "+b+" est :"+somme);
-		out.println("la division du "+a+" et "+b+" est:"+div);
-		out.println("la multiplication du "+a+" et "+b+" est :"+mul);
-		out.println("la soustraction du "+a+" et "+b+" est :"+sou);
+		if(choix.equals("addition")) {out.println("la somme du "+a+" et "+b+" est :"+somme);}
+		if(choix.equals("division")) {out.println("la division du "+a+" et "+b+" est:"+div);}
+		if(choix.equals("multiplication")) {out.println("la multiplication du "+a+" et "+b+" est :"+mul);}
+		if(choix.equals("soustraction")) {out.println("la soustraction du "+a+" et "+b+" est :"+sou);}
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		doGet(request, response);
-		PrintWriter out=response.getWriter();
-		
 	}
 
 }
