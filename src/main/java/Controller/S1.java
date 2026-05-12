@@ -46,7 +46,6 @@ public class S1 extends HttpServlet {
 		if(choix.equals("division")) {out.println("la division du "+a+" et "+b+" est:"+div);}
 		if(choix.equals("multiplication")) {out.println("la multiplication du "+a+" et "+b+" est :"+mul);}
 		if(choix.equals("soustraction")) {out.println("la soustraction du "+a+" et "+b+" est :"+sou);}
-		
 	}
 
 	/**
